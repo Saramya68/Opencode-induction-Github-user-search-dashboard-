@@ -1,5 +1,7 @@
 **GitHub User Search Dashboard
 
+Deployed website:https://saramya68.github.io/Opencode-induction-Github-user-search-dashboard-/ 
+
 A responsive web dashboard that allows users to search for GitHub profiles using the GitHub Public Search API.
 The app includes real-time search with debounce, pagination, loading/error states, and localStorage caching for a better user experience.
 
@@ -37,14 +39,6 @@ The app includes real-time search with debounce, pagination, loading/error state
 =>Results are displayed as cards
 =>Search query & page number are saved in localStorage
 =>On reload, the app restores the last search automatically
-
-
-**How to Run Locally
-
-=>Clone the repository
-=>git clone https://github.com/your-username/github-user-search-dashboard.git
-=>Open the project folder
-=>Open index.html in your browser
 
 
 **API Used
