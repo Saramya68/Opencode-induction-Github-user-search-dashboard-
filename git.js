@@ -118,7 +118,7 @@ function nextPage() {
 
   /* ===================== ADDED: SAVE PAGE ===================== */
   localStorage.setItem("githubPage", currentPage);
-  /* ===================== END SAVE PAGE ===================== */
+  /* ================== END SAVE PAGE ================== */
 
   fetchUsers();
   }
