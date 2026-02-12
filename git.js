@@ -56,13 +56,13 @@ async function fetchUsers() {
   try {
     const url = `https://api.github.com/search/users?q=${encodeURIComponent(currentQuery)}&page=${currentPage}&per_page=${perPage}`;
 
-    let num=`https://api.github.com/search/users?q=${encodeURIComponent(currentQuery)}`
-    fetch(num)
-    .then((response)=>{
-      return response.json()
-    }).then((data)=>{
-      console.log(data.total_count)
-    })
+    // let num=`https://api.github.com/search/users?q=${encodeURIComponent(currentQuery)}`
+    // fetch(num)
+    // .then((response)=>{
+    //   return response.json()
+    // }).then((data)=>{
+    //   console.log(data.total_count)
+    // })
 
     const response = await fetch(url, {
       headers: {
@@ -77,6 +77,8 @@ async function fetchUsers() {
     const data = await response.json();
     displayUsers(data.items);
 
+ totalpages=Math.ceil(data.total_count/perPage)
+    
     status.innerText = "";
     let pagenum=document.getElementById("pageNum");
     pagenum.innerText =`${currentPage}/${Math.ceil(data.total_count/perPage)}`;
@@ -86,7 +88,7 @@ async function fetchUsers() {
     console.error(error);
     status.innerText = "Something went wrong!";
   }
-  totalpages=Math.ceil(data.total_count/perPage)
+ 
 }
 
 // Display Users
