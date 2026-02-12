@@ -113,6 +113,7 @@ function displayUsers(users) {
 
 // Next Page
 function nextPage() {
+  if(currentPage<data.total_count/perPage){
   currentPage++;
 
   /* ===================== ADDED: SAVE PAGE ===================== */
@@ -120,6 +121,7 @@ function nextPage() {
   /* ===================== END SAVE PAGE ===================== */
 
   fetchUsers();
+  }
 }
 
 // Prev Page
