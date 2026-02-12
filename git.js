@@ -1,6 +1,7 @@
 
 /* ===================== ADDED: DEBOUNCE SETUP ===================== */
 let debounceTimer;
+let totalpages=0;
 const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("input", () => {
@@ -85,6 +86,7 @@ async function fetchUsers() {
     console.error(error);
     status.innerText = "Something went wrong!";
   }
+  totalpages=Math.ceil(data.total_count/perPage)
 }
 
 // Display Users
@@ -113,7 +115,7 @@ function displayUsers(users) {
 
 // Next Page
 function nextPage() {
-  if(currentPage<data.total_count/perPage){
+  if(currentPage<totalpages){
   currentPage++;
 
   /* ===================== ADDED: SAVE PAGE ===================== */
