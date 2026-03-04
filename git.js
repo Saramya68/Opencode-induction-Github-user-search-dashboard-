@@ -63,10 +63,11 @@ async function fetchUsers() {
     // }).then((data)=>{
     //   console.log(data.total_count)
     // })
-
+    const key="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"
     const response = await fetch(url, {
       headers: {
-        "User-Agent": "Mozilla/5.0"
+        "User-Agent": "Mozilla/5.0",
+        "Authorization": `Bearer ${key}`
       }
     });
 
