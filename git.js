@@ -67,9 +67,9 @@ async function fetchUsers() {
     const response = await fetch(url, {
       headers: {
         "User-Agent": "Mozilla/5.0",
-         "Accept": "application/vnd.github+json",
-        "Authorization": `Bearer ${key}`,
-         "X-GitHub-Api-Version": "2022-11-28"
+        //  "Accept": "application/vnd.github+json",
+        // "Authorization": `Bearer ${key}`,
+        //  "X-GitHub-Api-Version": "2022-11-28"...this wont work...as the token is visible..as i didnt integrated it with backend,,so github is not accepting the API reuest ..for secured reasons;
       }
     });
 
